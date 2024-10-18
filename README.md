@@ -1,6 +1,5 @@
 This repository will apply peribolos to manage organization complytime.
 
-
 To use Peribolos to manage organization, the base requirement is Go setup.
 When running Peribolos, it needs permission to access to the organization,
 and repository resources. The github app installation access token has no
