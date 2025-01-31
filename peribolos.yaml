@@ -73,4 +73,5 @@ orgs:
         repos:
           complytime: write
           compliance-to-policy-go: write
+          oscal-sdk-go: write
           trestle-bot: write
