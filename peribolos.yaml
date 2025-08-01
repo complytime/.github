@@ -55,8 +55,8 @@ orgs:
         default_branch: main
         description: A repo with c2p plugins for complytime
         has_projects: true
-      docs:
-        description: Documentation
+    docs:
+      description: Documentation
     teams:
       complytime-approvers:
         description: This would be a CODEOWNER group for cmd complytime
