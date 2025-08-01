@@ -53,7 +53,7 @@ orgs:
         has_projects: true
       "compliance-to-policy-plugins"
         default_branch: main
-        description: 
+        description: A repo with c2p plugins for complytime
         has_projects: true
     docs:
         description: Documentation
