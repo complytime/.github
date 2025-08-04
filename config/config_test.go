@@ -18,7 +18,6 @@ package config
 import (
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path"
 	"sort"
@@ -49,7 +48,7 @@ func TestMain(m *testing.M) {
 		os.Exit(1)
 	}
 
-	raw, err := ioutil.ReadFile(*configPath)
+	raw, err := os.ReadFile(*configPath)
 	if err != nil {
 		fmt.Printf("cannot read configuation from %s: %v\n", *configPath, err)
 		os.Exit(1)
