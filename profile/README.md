@@ -55,92 +55,18 @@ A: Yes, but it is not limited to it. ComplyTime is a multi-standard platform. It
 
 A: Gemara represents an engineering-first approach to compliance automation, making it a natural fit for cloud-native workflows. Its backing by the OSSF and its role in the strategic OSPS Baseline initiative signal a major shift in the industry. Supporting Gemara allows us to address critical gaps left by document-centric standards and position ComplyTime at the forefront of modern compliance automation.
 
-## Role-based Resources
+## Quick Start
 
-**Relative association:**
+Check out the [**community repo**](https://github.com/complytime/community) where you can find tailored content to get started with ComplyTime.
 
-* Cloud Native Developer / DevOps Engineer: see `DEVELOPERS.md`
-* Security Professional / GRC Officer: see `COMPLIANCE_MANAGERS.md` and `AUDITORS.md`
-* Open Source Contributors: see `DEVELOPERS.md`
+### Navigating the Community
 
-## What You'll Need
+#### Guides based on Expertise
 
-* MacOS
-* Linux machines
-* Release downloads
+* **Cloud Native Developer / DevOps Engineer:** see `DEVELOPERS.md`
+* **Security Professional / GRC Officer:** see `COMPLIANCE_MANAGERS.md` and `AUDITORS.md`
+* **Open Source Contributors:** see `DEVELOPERS.md`, `INSTALLATION.md`
 
-### Useful commands
+#### System Configuration
 
-#### Getting the OSCAL Content
-
-* Fork the  [`ComplianceAsCode/oscal-content`](https://github.com/ComplianceAsCode/oscal-content) repository.
-
-* Clone the repository using `git clone git@github.com:ComplianceAsCode/oscal-content.git`. 
-
-* Ensure that you run the command `git remote add upstream git@github.com:ComplianceAsCode/oscal-content.git` to ensure that your fork can easily stay up-to-date with the upstream. 
-
-
-
-```bash
-# Copying OSCAL Catalogs from oscal-content 
-cp ~/{path-to-your-forked-oscal-content}/catalogs/ -r ~/.local/share/complytime/bundles/
-
-# Copying OSCAL Profiles from oscal-content
-cp ~/{path-to-your-forked-oscal-content}/profiles/ -r ~/.local/share/complytime/controls/
-
-# Copying OSCAL Component Definitions from oscal-content
-cp ~/{path-to-your-forked-oscal-content}/component-definitions/ -r ~/.local/share/complytime/controls/
-```
-
-The ~/.local/share/complytime/bundles and controls/ will hold the catalog.json, profile.json, and the component-definition.json that will allow for use with the complyctl commands.
-
-
-
-
-```shell
-make build
-export COMPLYTIME_DEV_MODE=1
-```
-
-```bash
-./bin/complyctl list # See the available frameworks
-./bin/complyctl info <framework-id> 
-./bin/complyctl plan <framework-id> --dry-run # See default assessment plan contents
-./bin/complyctl plan <framework-id> --dry-run --out config.yml # Create a config file to edit assessment plan
-./bin/complyctl plan <framework-id> --scope-config config.yml # Write assessment plan to workspace
-
-```
-
-#### Example OSCAL Content
-
-[ANSSI catalog.json](https://github.com/ComplianceAsCode/oscal-content/blob/main/catalogs/anssi/catalog.json)
-
-[RHEL10 ANSSI Minimal profile.json](https://github.com/ComplianceAsCode/oscal-content/blob/main/profiles/rhel10-anssi-minimal/profile.json)
-
-![rhel10 anssi catalog](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/catalog.png?raw=true)
-
-> Once the profile content has been copied to `~/.local/share/complytime/controls/profile.json` ensure the href is "file://controls/{name-of-catalog}.json"
-
-![rhel10 anssi minimal profile](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/profile.png?raw=true)
-
-[RHEL10 ANSSI Minimal component-definition.json](https://github.com/ComplianceAsCode/oscal-content/blob/main/component-definitions/rhel10/rhel10-anssi-minimal/component-definition.json)
-
-![rhel10 anssi minimal component definition](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/compdef.png?raw=true)
-
-> Once the component definition content has been copied to `~/.local/share/complytime/bundles/component-definition.json` the href should be the following: "file://controls/{name-of-profile}.json"
-
-**`complyctl info --limit 5`**
-
-![info](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/info.png?raw=true)
-
-**`complyctl info --control r30 --limit 5`**
-
-![info control](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/info-control.png?raw=true)
-
-**`complyctl info --rule set_password_hashing_algorith_systemauth`**
-
-![info rule](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/info-rule.png?raw=true)
-
-**`complyctl info --parameter var_accounts_maximum_age_root`**
-
-![info parameter](https://github.com/hbraswelrh/.github/blob/docs/profile-readme/profile/img/info-parameter.png?raw=true)
+Everything that you need to get started will be available in the `community/docs`. The `INSTALLATION.md` points directly to the system configuration requirements.
