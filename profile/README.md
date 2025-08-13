@@ -2,21 +2,20 @@
 
 > From Code to Compliance, Intelligently.
 
-ComplyTime is an engineering-first, API-driven framework designed to automate and unify compliance across the modern, cloud native landscape. We bridge the gap between high-level policy and technical implementation, empowering developers and securing your entire product portfolio.
+ComplyTime is an engineering-first, API-driven framework designed to automate and unify compliance across the modern, cloud-native landscape. For the Cloud Native Developer and DevOps Engineer, it's a solution that simplifies compliance checks, making them an integral part of your workflow rather than an added burden.
 
 ## About ComplyTime
 
-The world of compliance is at a crossroads. Traditional, document-centric models are failing to keep pace with the speed of cloud native development. ComplyTime was born from the need for a more agile, developer-focused solution. 
+ComplyTime bridges the gap between high-level policy and technical implementation, empowering developers and securing your entire product portfolio. We believe that effective compliance automation must be built on a foundation that respects and integrates with your existing workflows.
 
-Our mission is to provide a unified, scanner-agnostic, and extensible microservice that transforms how organizations manage compliance artifacts. We believe in meeting developers where they are, integrating seamlessly into their workflows, and abstracting away the complexities of GRC (Governance, Risk, and Compliance) frameworks.
 
 ## Our Philosophy: Engineering-First
 
 We believe that effective compliance automation must be built on a foundation that understands and respects developer workflows.
 
-* **Engineering-Centric, Not Document-Centric**: Traditional compliance models digitize paperwork, resulting in massive, monolithic documents that hinder automation. ComplyTime adopts an engineering-first logical model, focusing on the granular, machine-readable data needed for true "compliance-as-code".
-* **Built for Automation**: Our architecture is designed for the ephemeral, API-driven nature of cloud native systems. We enable programmatic, interactive engagement with compliance data, moving beyond slow, batch-processing of static files.
-* **Flexible and Extensible**: A single standard cannot rule the modern compliance landscape. Reliance on a single standard creates unacceptable risk. ComplyTime is designed to be multi-standard and scanner-agnostic, ensuring long-term relevance and adaptability.
+* **Engineering-First:** We focus on machine-readable data for "compliance-as-code," moving beyond traditional, document-centric models.
+* **Built for Automation:** Our architecture is designed for the ephemeral, API-driven nature of cloud-native systems, allowing for programmatic interaction with compliance data.
+* **Flexible and Extensible:** ComplyTime is scanner-agnostic and multi-standard, ensuring it remains relevant and adaptable to various compliance frameworks.
 
 ## Project Architecture
 
@@ -32,11 +31,11 @@ We leverage powerful, targeted open source components to achieve our goals. For 
 
 ## Community & Contributing
 
-We are committed to the open source community. All of our governance, contribution guidelines, and community standards are located in our **[community repository](./community/)**.
+We are committed to the open source community. All the information you need to get started is in our **[community repository](./community/)**.
 
-* **[Governance](./community/GOVERNANCE.md)**: Our project roles and decision-making process.
-* **[Contributing Guide](./community/CONTRIBUTING.md)**: How to get started with your first contribution.
-* **[Code of Conduct](./community/CODE_OF_CONDUCT.md)**: Our community standards.
+* **How to Contribute:** Check out our [Contributing Guide](./community/CONTRIBUTING.md) to learn how to submit your first pull request, find an issue to work on, and understand our development process.
+* **Community Standards:** Our [Code of Conduct](./community/CODE_OF_CONDUCT.md) outlines the standards we uphold to maintain a welcoming and inclusive environment for everyone.
+* **Project Governance:** Read our [Governance](./community/GOVERNANCE.md) document to understand our project roles and decision-making processes.
 
 ## The Road Ahead
 
@@ -45,7 +44,9 @@ Our vision is to establish ComplyTime as the definitive framework for modern, au
 * **Deepening Cloud-Native Integration**: Enhancing our integration with core cloud-native technologies, including Red Hat Insights, Advanced Cluster Security (ACS), and OpenShift Observability.
 * **Championing Open, Agile Standards**: Continuing to invest in and advocate for engineering-driven standards like Gemara that are purpose-built for the speed and scale of cloud-native development.
 
-## Frequently Asked Questions (FAQ)
+> Find our Frequently Asked Questions (FAQ) [here](./community/FAQ.md)
+
+<!-- ## Frequently Asked Questions (FAQ)
 
 **Q: Does ComplyTime use OSCAL?**
 
@@ -53,20 +54,4 @@ A: Yes, but it is not limited to it. ComplyTime is a multi-standard platform. It
 
 **Q: Why the focus on Gemara?**
 
-A: Gemara represents an engineering-first approach to compliance automation, making it a natural fit for cloud-native workflows. Its backing by the OSSF and its role in the strategic OSPS Baseline initiative signal a major shift in the industry. Supporting Gemara allows us to address critical gaps left by document-centric standards and position ComplyTime at the forefront of modern compliance automation.
-
-## Quick Start
-
-Check out the [**community repo**](https://github.com/complytime/community) where you can find tailored content to get started with ComplyTime.
-
-### Navigating the Community
-
-#### Guides based on Expertise
-
-* **Cloud Native Developer / DevOps Engineer:** see `DEVELOPERS.md`
-* **Security Professional / GRC Officer:** see `COMPLIANCE_MANAGERS.md` and `AUDITORS.md`
-* **Open Source Contributors:** see `DEVELOPERS.md`, `INSTALLATION.md`
-
-#### System Configuration
-
-Everything that you need to get started will be available in the `community/docs`. The `INSTALLATION.md` points directly to the system configuration requirements.
+A: Gemara represents an engineering-first approach to compliance automation, making it a natural fit for cloud-native workflows. Its backing by the OSSF and its role in the strategic OSPS Baseline initiative signal a major shift in the industry. Supporting Gemara allows us to address critical gaps left by document-centric standards and position ComplyTime at the forefront of modern compliance automation. -->
