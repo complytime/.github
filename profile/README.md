@@ -8,7 +8,6 @@ ComplyTime is an engineering-first, API-driven framework designed to automate an
 
 ComplyTime bridges the gap between high-level policy and technical implementation, empowering developers and securing your entire product portfolio. We believe that effective compliance automation must be built on a foundation that respects and integrates with your existing workflows.
 
-
 ## Our Philosophy: Engineering-First
 
 We believe that effective compliance automation must be built on a foundation that understands and respects developer workflows.
@@ -42,7 +41,6 @@ We are committed to the open source community. All the information you need to g
 Our vision is to establish ComplyTime as the definitive framework for modern, automated compliance. Our roadmap includes:
 
 * **Deepening Cloud-Native Integration**: Enhancing our integration with core cloud-native technologies, including Red Hat Insights, Advanced Cluster Security (ACS), and OpenShift Observability.
-* **Championing Open, Agile Standards**: Continuing to invest in and advocate for engineering-driven standards like Gemara that are purpose-built for the speed and scale of cloud-native development.
 
 > Find our Frequently Asked Questions (FAQ) [here](./community/FAQ.md)
 
