@@ -23,7 +23,7 @@ ComplyTime is built on a foundation of modern, microservice-based components des
 * **[complyctl](./complyctl/)**: A CLI tool providing a consistent compliance foundation for platforms like RHEL.
 * **[complyscribe](./complyscribe/)**: A key component of our pluggable framework, this service acts as a compliance-to-policy (C2P) engine, designed to be extensible for various compliance frameworks, not only OSCAL.
  <!-- TODO: A key component of our pluggable framework, this compliance authoring tool operates behind the scenes for an extensible integration for various compliance frameworks, not specific to OSCAL. -->
-* **[complybeacon](./complybeacon/)**: A planned microservice for continuous compliance monitoring in distributed environments like OpenShift.
+* **[complybeacon](./complybeacon/)**: A observability toolkit leveraging OpenTelemetry to simplify audit logging and evidence collection in distributed environments like Kubernetes.
 * **[complytime-demos](./complytime-demos/)**: A collection of demonstrations and examples for using the ComplyTime framework.
 
 We leverage powerful, targeted open source components to achieve our goals. For instance, we utilize `oscal-sdk-go` and `compliance-to-policy-go`, sub-projects of OSCAL-Compass that align with our engineering-first, multi-standard vision.
@@ -40,7 +40,7 @@ We are committed to the open source community. All the information you need to g
 
 Our vision is to establish ComplyTime as the definitive framework for modern, automated compliance. Our roadmap includes:
 
-* **Deepening Cloud-Native Integration**: Enhancing our integration with core cloud-native technologies, including Red Hat Insights, Advanced Cluster Security (ACS), and OpenShift Observability.
+* **Deepening Cloud-Native Integration**: Enhancing our integration with core cloud-native technologies, including StackRox and OpenTelemetry.
 
 > Find our Frequently Asked Questions (FAQ) [here](./community/FAQ.md)
 
