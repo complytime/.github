@@ -42,7 +42,7 @@ Our vision is to establish ComplyTime as the definitive framework for modern, au
 
 * **Deepening Cloud-Native Integration**: Enhancing our integration with core cloud-native technologies, including StackRox and OpenTelemetry.
 
-> Find our Frequently Asked Questions (FAQ) [here](./community/FAQ.md)
+<!-- > Find our Frequently Asked Questions (FAQ) [here](./community/FAQ.md) -->
 
 <!-- ## Frequently Asked Questions (FAQ)
 
