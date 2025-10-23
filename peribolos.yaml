@@ -65,7 +65,6 @@ orgs:
         privacy: closed
         members:
           - bplaxco
-          - qduanmu
       complytime-approvers:
         description: This would be a CODEOWNER group for cmd complytime
         privacy: closed
