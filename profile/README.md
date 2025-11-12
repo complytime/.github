@@ -2,11 +2,11 @@
 
 > From Code to Compliance, Intelligently.
 
-ComplyTime is an engineering-first, API-driven framework designed to automate and unify compliance across the modern, cloud-native landscape. For the Cloud Native Developer and DevOps Engineer, it's a solution that simplifies compliance checks, making them an integral part of your workflow rather than an added burden.
+ComplyTime is an engineering-first, API-driven framework designed to automate and unify compliance across the modern, cloud-native landscape. For the Cloud Native Developer and DevOps Engineer, it's a solution that simplifies compliance checks, making them an integral part of your workflow rather than an afterthought.
 
 ## About ComplyTime
 
-ComplyTime bridges the gap between high-level policy and technical implementation, empowering developers and securing your entire product portfolio. We believe that effective compliance automation must be built on a foundation that respects and integrates with your existing workflows.
+ComplyTime bridges the gap between high-level policy and technical implementation, empowering developers and securing your entire product portfolio.  
 
 ## Our Philosophy: Engineering-First
 
@@ -18,15 +18,15 @@ We believe that effective compliance automation must be built on a foundation th
 
 ## Project Architecture
 
-ComplyTime is built on a foundation of modern, microservice-based components designed for flexibility and scale.
+ComplyTime is built on a foundation of modern, interoperable components designed for flexibility and scale.
 
 * **[complyctl](https://github.com/complytime/complyctl)**: A CLI tool providing a consistent compliance foundation for platforms like RHEL.
-* **[complyscribe](https://github.com/complytime/complyscribe)**: A key component of our pluggable framework, this service acts as a compliance-to-policy (C2P) engine, designed to be extensible for various compliance frameworks, not only OSCAL.
+* **[complyscribe](https://github.com/complytime/complyscribe)**: A key component of our pluggable framework, this compliance authoring tool acts behind the scenes for an extensible integration for compliance frameworks, not specific to OSCAL. 
  <!-- TODO: A key component of our pluggable framework, this compliance authoring tool operates behind the scenes for an extensible integration for various compliance frameworks, not specific to OSCAL. -->
-* **[complybeacon](https://github.com/complytime/complybeacon)**: A observability toolkit leveraging OpenTelemetry to simplify audit logging and evidence collection in distributed environments like Kubernetes.
-* **[complytime-demos](https://github.com/complytime/complytime-demos)**: A collection of demonstrations and examples for using the ComplyTime framework.
+* **[complybeacon](https://github.com/complytime/complybeacon)**: An observability toolkit leveraging OpenTelemetry to simplify audit logging and evidence collection across distributed environments like Kubernetes.
+* **[complytime-demos](https://github.com/complytime/complytime-demos)**: A collection of demonstrations and examples for using the ComplyTime tools.
 
-We leverage powerful, targeted open source components to achieve our goals. For instance, we utilize `oscal-sdk-go` and `compliance-to-policy-go`, sub-projects of OSCAL-Compass that align with our engineering-first, multi-standard vision.
+We leverage powerful, targeted open source components to achieve our goals. We utilize `oscal-sdk-go` and `compliance-to-policy-go`, sub-projects of OSCAL-Compass that align with our engineering-first, multi-standard vision.
 
 ## Community & Contributing
 
