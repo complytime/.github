@@ -71,7 +71,7 @@ orgs:
         has_projects: true
       "beacon-collector-distro"
         default_branch: main
-        description: Repository for complytime engineering policies expressed in Gemara
+        description: Repository for beacon collector releases
         has_projects: true
     docs:
       description: Documentation
