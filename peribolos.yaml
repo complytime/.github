@@ -29,7 +29,7 @@ orgs:
         default_branch: main
         description: A repo with c2p plugins for complytime
         has_projects: true
-      "complybeacon":
+      "beacon-collector-components":
         default_branch: main
         description: A policy-driven observability toolkit for compliance evidence collection
         has_projects: true
@@ -64,6 +64,14 @@ orgs:
       "gemara-mcp-server":
         default_branch: main
         description: A MCP server for automating the authoring of GRC Risk Assessment documentation in gemara.
+        has_projects: true
+      "complytime-policies"
+        default_branch: main
+        description: Repository for complytime engineering policies expressed in Gemara
+        has_projects: true
+      "beacon-collector-distro"
+        default_branch: main
+        description: Repository for complytime engineering policies expressed in Gemara
         has_projects: true
     docs:
       description: Documentation
@@ -114,7 +122,8 @@ orgs:
           compliance-to-policy-go: write
           compliance-to-policy-plugins: write
           compliance-to-policy-python: write
-          complybeacon: write
+          beacon-collector-components: write
+          beacon-collector-distro: write
           complyctl: write
           complyscribe: write
           complytime-demos: write
