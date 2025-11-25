@@ -65,11 +65,11 @@ orgs:
         default_branch: main
         description: A MCP server for automating the authoring of GRC Risk Assessment documentation in gemara.
         has_projects: true
-      "complytime-policies"
+      "complytime-policies":
         default_branch: main
         description: Repository for complytime engineering policies expressed in Gemara
         has_projects: true
-      "beacon-collector-distro"
+      "beacon-collector-distro":
         default_branch: main
         description: Repository for beacon collector releases
         has_projects: true
