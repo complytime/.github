@@ -29,7 +29,7 @@ orgs:
         default_branch: main
         description: A repo with c2p plugins for complytime
         has_projects: true
-      "beacon-collector-components":
+      "complytime-collector-components":
         default_branch: main
         description: A policy-driven observability toolkit for compliance evidence collection
         has_projects: true
@@ -69,9 +69,12 @@ orgs:
         default_branch: main
         description: Repository for complytime engineering policies expressed in Gemara
         has_projects: true
-      "beacon-collector-distro":
+      "complytime-collector-distro":
         default_branch: main
         description: Repository for beacon collector releases
+      "community":
+        default_branch: main
+        description: Community-related documents for the ComplyTime project.
         has_projects: true
     docs:
       description: Documentation
@@ -119,11 +122,12 @@ orgs:
           - beatrizmcouto
         repos:
           cac-content: write
+          community: write
           compliance-to-policy-go: write
           compliance-to-policy-plugins: write
           compliance-to-policy-python: write
-          beacon-collector-components: write
-          beacon-collector-distro: write
+          complytime-collector-components: write
+          complytime-collector-distro: write
           complyctl: write
           complyscribe: write
           complytime-demos: write
