@@ -61,6 +61,10 @@ orgs:
         default_branch: main
         description: A transpiler for converting the gemara logical model to OSCAL
         has_projects: true
+      "gemara-content-service":
+        default_branch: main
+        description: A content delivery and enrichment service for Gemara compliance artifacts.
+        has_projects: true
       "org-infra":
         default_branch: main
         description: Repository for reusable workflows, shared configurations, and templates used in ComplyTime org.
@@ -137,6 +141,7 @@ orgs:
           complyscribe: write
           complytime-demos: write
           gemara2oscal: write
+          gemara-content-service: write
           org-infra: write
           oscal-content: write
           oscal-sdk-go: write
