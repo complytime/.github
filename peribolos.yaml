@@ -37,6 +37,7 @@ orgs:
       - trevor-vaughan
       - vojtapolasek
       - yvonnedevlinrh
+      - Pranshul01051987
     repos:
       ".github":
         default_branch: main
