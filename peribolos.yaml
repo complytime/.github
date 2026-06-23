@@ -75,10 +75,6 @@ orgs:
         default_branch: main
         description: Repository for complytime engineering policies expressed in Gemara
         has_projects: true
-      "gemara-content-service":
-        default_branch: main
-        description: A content delivery and enrichment service for Gemara compliance artifacts.
-        has_projects: true
       "org-infra":
         default_branch: main
         description: Repository for reusable workflows, shared configurations, and templates used in ComplyTime org.
@@ -115,7 +111,6 @@ orgs:
           complytime-demos: write
           complytime-policies: write
           complytime-providers: write
-          gemara-content-service: write
           org-infra: write
           website: write
       complytime-approvers:
@@ -217,6 +212,5 @@ orgs:
           complytime-demos: write
           complytime-policies: write
           complytime-providers: write
-          gemara-content-service: write
           org-infra: write
           website: write
