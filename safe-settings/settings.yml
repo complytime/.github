@@ -25,7 +25,7 @@
 #
 # Excluded from safe-settings management:
 #   complyscribe:              archived
-#   gemara-content-service:    scheduled for archival
+#   gemara-content-service:    archived (moved to complytime-labs)
 
 repository:
   # Allow auto-merge on pull requests when all requirements are met.

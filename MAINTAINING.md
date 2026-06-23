@@ -298,7 +298,7 @@ The following repos are excluded from safe-settings management:
 - `.github` — the admin repo (avoids circular dependency). Its
   ruleset ("verify") is managed manually via the GitHub UI.
 - `complyscribe` — archived.
-- `gemara-content-service` — pending archival.
+- `gemara-content-service` — archived (moved to complytime-labs).
 
 These are listed in `safe-settings/deployment-settings.yml` under
 `restrictedRepos` and/or excluded from suborg files.

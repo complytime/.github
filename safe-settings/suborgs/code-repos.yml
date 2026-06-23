@@ -7,7 +7,7 @@
 # Only override settings here if code repos need different values
 # than the org-wide defaults.
 #
-# Excluded: complyscribe (archived), gemara-content-service (archival pending)
+# Excluded: complyscribe (archived), gemara-content-service (archived)
 
 suborgrepos:
   - complyctl
