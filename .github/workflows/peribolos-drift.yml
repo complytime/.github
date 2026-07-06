@@ -121,6 +121,7 @@ jobs:
         id: existing-issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
         run: |
           ISSUE_NUMBER=$(gh issue list \
             --label peribolos-drift \
@@ -134,6 +135,7 @@ jobs:
         if: steps.drift.outputs.drift == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ steps.existing-issue.outputs.issue_number }}
           WORKFLOW_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         run: |
