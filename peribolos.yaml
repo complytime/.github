@@ -54,7 +54,7 @@ orgs:
       "complypack":
         default_branch: main
         description: Assessment logic packaging for complyctl
-        has_projects: true 
+        has_projects: true
       "complyscribe":
         default_branch: main
         description: A workflow automation tool for compliance content authoring
