@@ -79,9 +79,8 @@ orgs:
         default_branch: main
         description: Repository for complytime engineering policies expressed in Gemara
         has_projects: true
-      "homebrew-tap"
+      "homebrew-tap":
         default_branch: main
-        description: 
         has_projects: true
       "org-infra":
         default_branch: main
