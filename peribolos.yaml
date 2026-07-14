@@ -114,6 +114,7 @@ orgs:
           complytime-demos: write
           complytime-policies: write
           complytime-providers: write
+          homebrew-tap: triage
           org-infra: write
           website: write
       complytime-approvers:
@@ -215,5 +216,6 @@ orgs:
           complytime-demos: write
           complytime-policies: write
           complytime-providers: write
+          homebrew-tap: write
           org-infra: write
           website: write
