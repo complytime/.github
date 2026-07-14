@@ -51,6 +51,10 @@ orgs:
         default_branch: main
         description: A command-line tool for streamlining end-to-end compliance workflows on local systems.
         has_projects: true
+      "complypack":
+        default_branch: main
+        description: Assessment logic packaging for complyctl
+        has_projects: true
       "complyscribe":
         default_branch: main
         description: A workflow automation tool for compliance content authoring
@@ -75,6 +79,9 @@ orgs:
         default_branch: main
         description: Repository for complytime engineering policies expressed in Gemara
         has_projects: true
+      "homebrew-tap":
+        default_branch: main
+        has_projects: true
       "org-infra":
         default_branch: main
         description: Repository for reusable workflows, shared configurations, and templates used in ComplyTime org.
@@ -82,10 +89,6 @@ orgs:
       "website":
         default_branch: main
         description: The ComplyTime website
-        has_projects: true
-      "complypack":
-        default_branch: main
-        description: Assessment logic packaging for complyctl
         has_projects: true
     teams:
       security-managers:
@@ -111,6 +114,7 @@ orgs:
           complytime-demos: write
           complytime-policies: write
           complytime-providers: write
+          homebrew-tap: triage
           org-infra: write
           website: write
       complytime-approvers:
@@ -212,5 +216,6 @@ orgs:
           complytime-demos: write
           complytime-policies: write
           complytime-providers: write
+          homebrew-tap: write
           org-infra: write
           website: write
