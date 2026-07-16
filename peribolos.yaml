@@ -132,6 +132,14 @@ orgs:
           community: write
           complytime-demos: write
           website: write
+      architectural-review-board:
+        description: Architectural review board
+        members:
+          - gxmiranda
+          - jpower432
+          - marcusburghardt
+        repos:
+          complytime: maintain
       ampel-provider-approvers:
         description: CODEOWNERS group for ampel-provider in complytime-providers
         privacy: closed
@@ -197,7 +205,6 @@ orgs:
         description: People working on complytime repo
         privacy: closed
         maintainers:
-          - jpower432
           - marcusburghardt
         members:
           - em-redhat
