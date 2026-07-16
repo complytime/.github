@@ -134,10 +134,11 @@ orgs:
           website: write
       architectural-review-board:
         description: Architectural review board
-        members:
-          - gxmiranda
+        maintainers:
           - jpower432
           - marcusburghardt
+        members:
+          - gxmiranda
         repos:
           complytime: maintain
       ampel-provider-approvers:
