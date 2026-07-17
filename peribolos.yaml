@@ -132,8 +132,8 @@ orgs:
           community: write
           complytime-demos: write
           website: write
-      architectural-review-board:
-        description: Architectural review board
+      architecture-advisory-council:
+        description: Architecture advisory council
         privacy: closed
         maintainers:
           - jpower432
