@@ -134,6 +134,7 @@ orgs:
           website: write
       architectural-review-board:
         description: Architectural review board
+        privacy: closed
         maintainers:
           - jpower432
           - marcusburghardt
