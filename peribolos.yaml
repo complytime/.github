@@ -20,7 +20,6 @@ orgs:
       - em-redhat
       - fkolacek-rh
       - fortiz-ai
-      - gvauter
       - gxmiranda
       - hbraswelrh
       - jamimoor
@@ -150,7 +149,6 @@ orgs:
           - marcusburghardt
         members:
           - em-redhat
-          - gvauter
           - gxmiranda
           - hbraswelrh
           - sonupreetam
@@ -166,7 +164,6 @@ orgs:
           - marcusburghardt
         members:
           - em-redhat
-          - gvauter
           - gxmiranda
           - hbraswelrh
           - sonupreetam
@@ -183,7 +180,6 @@ orgs:
         members:
           - em-redhat
           - fortiz-ai
-          - gvauter
           - gxmiranda
           - hbraswelrh
           - sonupreetam
@@ -210,7 +206,6 @@ orgs:
           - marcusburghardt
         members:
           - em-redhat
-          - gvauter
           - gxmiranda
           - hbraswelrh
           - sonupreetam
