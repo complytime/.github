@@ -217,6 +217,7 @@ orgs:
           - yvonnedevlinrh
         repos:
           community: write
+          complyapi: write
           complyctl: write
           complypack: write
           complyscribe: write
