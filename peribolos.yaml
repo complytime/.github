@@ -47,6 +47,10 @@ orgs:
         default_branch: main
         description: Community-related documents for the ComplyTime project.
         has_projects: true
+      "complyapi":
+        default_branch: main
+        description: A push-based evidence API for ComplyTime.
+        has_projects: true
       "complyctl":
         default_branch: main
         description: A command-line tool for streamlining end-to-end compliance workflows on local systems.
@@ -213,6 +217,7 @@ orgs:
           - yvonnedevlinrh
         repos:
           community: write
+          complyapi: write
           complyctl: write
           complypack: write
           complyscribe: write
