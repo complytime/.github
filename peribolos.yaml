@@ -34,6 +34,7 @@ orgs:
       - rbaratam-psc
       - rhaml-23
       - rmonk-redhat
+      - sedonnel
       - sonupreetam
       - trevor-vaughan
       - vojtapolasek
@@ -155,6 +156,7 @@ orgs:
           - em-redhat
           - gxmiranda
           - hbraswelrh
+          - sedonnel
           - sonupreetam
           - trevor-vaughan
           - yvonnedevlinrh
@@ -170,6 +172,7 @@ orgs:
           - em-redhat
           - gxmiranda
           - hbraswelrh
+          - sedonnel
           - sonupreetam
           - trevor-vaughan
           - yvonnedevlinrh
@@ -186,6 +189,7 @@ orgs:
           - fortiz-ai
           - gxmiranda
           - hbraswelrh
+          - sedonnel
           - sonupreetam
           - trevor-vaughan
           - yvonnedevlinrh
@@ -212,6 +216,7 @@ orgs:
           - em-redhat
           - gxmiranda
           - hbraswelrh
+          - sedonnel
           - sonupreetam
           - trevor-vaughan
           - yvonnedevlinrh
