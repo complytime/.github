@@ -6,6 +6,7 @@ orgs:
     has_repository_projects: true
     members_can_create_repositories: true
     admins:
+      - gxmiranda
       - jflowers
       - jpower432
       - marcusburghardt
@@ -20,7 +21,6 @@ orgs:
       - em-redhat
       - fkolacek-rh
       - fortiz-ai
-      - gxmiranda
       - hbraswelrh
       - jamimoor
       - JenniferPrivette
@@ -140,21 +140,20 @@ orgs:
         description: Architecture advisory council
         privacy: closed
         maintainers:
+          - gxmiranda
           - jpower432
           - marcusburghardt
-        members:
-          - gxmiranda
         repos:
           complytime: maintain
       ampel-provider-approvers:
         description: CODEOWNERS group for ampel-provider in complytime-providers
         privacy: closed
         maintainers:
+          - gxmiranda
           - jpower432
           - marcusburghardt
         members:
           - em-redhat
-          - gxmiranda
           - hbraswelrh
           - sedonnel
           - sonupreetam
@@ -166,11 +165,11 @@ orgs:
         description: CODEOWNERS group for openscap-provider in complytime-providers
         privacy: closed
         maintainers:
+          - gxmiranda
           - jpower432
           - marcusburghardt
         members:
           - em-redhat
-          - gxmiranda
           - hbraswelrh
           - sedonnel
           - sonupreetam
@@ -182,12 +181,12 @@ orgs:
         description: CODEOWNERS group for opa-provider in complytime-providers
         privacy: closed
         maintainers:
+          - gxmiranda
           - jpower432
           - marcusburghardt
         members:
           - em-redhat
           - fortiz-ai
-          - gxmiranda
           - hbraswelrh
           - sedonnel
           - sonupreetam
@@ -211,10 +210,10 @@ orgs:
         description: People working on complytime repo
         privacy: closed
         maintainers:
+          - gxmiranda
           - marcusburghardt
         members:
           - em-redhat
-          - gxmiranda
           - hbraswelrh
           - sedonnel
           - sonupreetam
