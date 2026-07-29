@@ -20,6 +20,7 @@ GitHub organization using two complementary tools: **peribolos** and
 | Dependabot alerts and fixes | safe-settings | `safe-settings/settings.yml` |
 | Branch protection rules | safe-settings | `safe-settings/settings.yml` |
 | Rulesets | safe-settings | `safe-settings/settings.yml` |
+| Cross-repo label standardization | custom workflow | `labels-policy.json`, `scripts/sync_labels.py` |
 | `.github` repo ruleset | **manual** | GitHub UI |
 
 **Why two tools?** Peribolos manages org-level concerns (who is a member,
@@ -87,6 +88,20 @@ that differ from its suborg defaults.
 
 See `safe-settings/repos/complyctl.yml` for an example (complyctl requires
 2 approvers instead of the org default of 1).
+
+### Reconcile Labels Across Repositories
+
+Use the **"Labels: Sync"** workflow for label-only changes that do not fit
+safe-settings' "apply everything in this config" model.
+
+The workflow reads `labels-policy.json` and applies three kinds of changes:
+
+1. Ensure a shared set of standard labels exists everywhere.
+2. Rename legacy labels only in repositories where they already exist.
+3. Delete only explicitly-listed labels, leaving all other local labels alone.
+
+This is useful when some labels must remain repo-specific and should not be
+replicated across the organization.
 
 ## Override Validator Policies
 
@@ -218,6 +233,13 @@ Go to Actions > "Safe Settings Sync" > "Run workflow":
 - **repos**: comma-separated list of repos to target (e.g.,
   `complytime-demos,community`). Leave empty to apply to all managed
   repos.
+
+### Labels
+
+Go to Actions > "Labels: Sync" > "Run workflow":
+- **dry-run**: `true` to preview, `false` to apply (defaults to `true`)
+- **repos**: comma-separated list of repos to target. Leave empty to apply
+  to all repos except those excluded in `labels-policy.json`
 
 ### Future automation
 

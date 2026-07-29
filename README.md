@@ -5,6 +5,8 @@ complementary tools:
   — org membership, teams, and team-repo permissions (`peribolos.yaml`)
 - **[safe-settings](https://github.com/github/safe-settings)** — repository
   settings, branch protection, rulesets, and security config (`safe-settings/`)
+- **Custom label sync** — targeted repository label normalization and cleanup
+  (`labels-policy.json`, `scripts/sync_labels.py`)
 
 For maintainer workflows, local testing, and troubleshooting, see
 **[MAINTAINING.md](MAINTAINING.md)**.

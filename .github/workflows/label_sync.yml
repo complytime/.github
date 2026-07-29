@@ -1,0 +1,74 @@
+name: "Labels: Sync"
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Preview label changes without applying them"
+        required: false
+        type: boolean
+        default: true
+      repos:
+        description: >-
+          Optional comma-separated list of repos to target.
+          Leave empty to target all repos except complytime and roadmap.
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: label-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-labels:
+    if: github.repository_owner == 'complytime'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout complytime/.github repo
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Python
+        uses: actions/setup-python@42375524a786f35ee56e4dbe431d0097254bc67c # v6.0.0
+        with:
+          python-version: "3.13"
+
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.COMPLYTIME_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.COMPLYTIME_BOT_PRIVATE_KEY }}
+          owner: complytime
+
+      - name: Sync labels
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          INPUT_REPOS: ${{ inputs.repos }}
+          DRY_RUN: ${{ inputs.dry-run }}
+        run: |
+          set -eu
+
+          REPO_ARGS=""
+          if [ -n "$INPUT_REPOS" ]; then
+            CLEANED=$(printf '%s' "$INPUT_REPOS" | tr ',' ' ')
+            REPO_ARGS="--repos $CLEANED"
+          fi
+
+          if [ "$DRY_RUN" = "true" ]; then
+            DRY_ARG="--dry-run"
+          else
+            DRY_ARG=""
+          fi
+
+          # shellcheck disable=SC2086
+          python3 scripts/sync_labels.py \
+            --policy labels-policy.json \
+            $DRY_ARG \
+            $REPO_ARGS
