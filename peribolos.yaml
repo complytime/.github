@@ -20,6 +20,7 @@ orgs:
       - eeasley2014
       - em-redhat
       - fortiz-ai
+      - ggbecker
       - hbraswelrh
       - jamimoor
       - JenniferPrivette
@@ -198,6 +199,7 @@ orgs:
           - marcusburghardt
         members:
           - fortiz-ai
+          - ggbecker
           - rhaml-23
         repos:
           complytime-policies: write
