@@ -17,6 +17,7 @@ orgs:
       - benroose
       - bplaxco
       - ccronca
+      - cdaniels255
       - dbaker-arch
       - eeasley2014
       - em-redhat
@@ -213,6 +214,7 @@ orgs:
           - gxmiranda
           - marcusburghardt
         members:
+          - cdaniels255
           - em-redhat
           - hbraswelrh
           - sedonnel
