@@ -21,6 +21,7 @@ orgs:
       - eeasley2014
       - em-redhat
       - fortiz-ai
+      - ggbecker
       - hbraswelrh
       - iswiac
       - jamimoor
@@ -201,6 +202,7 @@ orgs:
           - marcusburghardt
         members:
           - fortiz-ai
+          - ggbecker
           - rhaml-23
         repos:
           complytime-policies: write
