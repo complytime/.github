@@ -16,12 +16,16 @@ orgs:
       - beatrizmcouto
       - benroose
       - bplaxco
+      - ccronca
+      - cdaniels255
       - dbaker-arch
       - dmairrh
       - eeasley2014
       - em-redhat
       - fortiz-ai
+      - ggbecker
       - hbraswelrh
+      - iswiac
       - jamimoor
       - JenniferPrivette
       - mblanco474
@@ -30,8 +34,11 @@ orgs:
       - Pranshul01051987
       - rbaratam-psc
       - rhaml-23
+      - SecKatie
       - sedonnel
       - sonupreetam
+      - srslypleaswaite
+      - StepHar-KAZ2Y5
       - trevor-vaughan
       - vojtapolasek
       - yvonnedevlinrh
@@ -199,6 +206,7 @@ orgs:
           - marcusburghardt
         members:
           - fortiz-ai
+          - ggbecker
           - rhaml-23
         repos:
           complytime-policies: write
@@ -209,6 +217,7 @@ orgs:
           - gxmiranda
           - marcusburghardt
         members:
+          - cdaniels255
           - em-redhat
           - hbraswelrh
           - sedonnel
