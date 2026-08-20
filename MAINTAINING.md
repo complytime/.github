@@ -85,6 +85,18 @@ already a member) but it triggers a false-positive drift alert.
 3. Ensure admins are listed as `maintainers`, not `members` (CI validates).
 4. Submit a PR and merge.
 
+### Evidence Locker MVP reviewers
+
+`evidence-locker-mvp-reviewers` is the reviewer pool for issues and pull
+requests whose milestone title is **Evidence Locker MVP** (or **Internal
+Evidence Locker MVP**). Membership is the source of truth: change the
+`members` list in `peribolos.yaml` to add or remove reviewers.
+
+GitHub CODEOWNERS cannot filter on milestones, so assignment is done by
+the org-infra workflow **Assign Evidence Locker MVP Reviewers** (see
+`docs/MILESTONE_REVIEWERS.md` in `complytime/org-infra`). Native GitHub
+code review auto-assignment is not used for this team.
+
 ### Add a New Repository to Safe-settings Management
 
 1. Add the repo to `peribolos.yaml` with `description`, `has_projects`,
