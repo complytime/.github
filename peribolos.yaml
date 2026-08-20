@@ -236,5 +236,9 @@ orgs:
           complytime-policies: write
           complytime-providers: write
           homebrew-tap: write
+          # Maintain is required to create sub-issues (GitHub hides the
+          # button for Read). nunya-access is a secret team, so peribolos
+          # cannot manage it (--ignore-secret-teams).
+          nunya: maintain
           org-infra: write
           website: write
