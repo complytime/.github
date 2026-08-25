@@ -238,3 +238,32 @@ orgs:
           homebrew-tap: write
           org-infra: write
           website: write
+      evidence-locker-mvp-reviewers:
+        description: Reviewers automatically assigned to Evidence Locker MVP milestone items
+        privacy: closed
+        maintainers:
+          - gxmiranda
+          - jpower432
+          - marcusburghardt
+        members:
+          - hbraswelrh
+          - sedonnel
+          - trevor-vaughan
+        repos:
+          community: write
+          complyapi: write
+          complyctl: write
+          complypack: write
+          complyscribe: write
+          complytime: write
+          complytime-collector-components: write
+          complytime-demos: write
+          complytime-policies: write
+          complytime-providers: write
+          homebrew-tap: write
+          # Maintain is required to create sub-issues (GitHub hides the
+          # button for Read). nunya-access is a secret team, so peribolos
+          # cannot manage it (--ignore-secret-teams).
+          nunya: maintain
+          org-infra: write
+          website: write
