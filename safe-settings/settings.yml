@@ -78,6 +78,7 @@ rulesets:
         exclude: []
       repository_name:
         include:
+          - complyapi
           - complyctl
           - complypack
           - complytime-collector-components
