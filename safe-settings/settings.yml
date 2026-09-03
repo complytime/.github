@@ -84,6 +84,7 @@ rulesets:
           - complytime-collector-components
           - complytime-policies
           - complytime-providers
+          - homebrew-tap
           - org-infra
         exclude: []
 

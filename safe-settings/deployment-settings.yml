@@ -23,6 +23,7 @@ restrictedRepos:
     - complytime-demos
     - complytime-policies
     - complytime-providers
+    - homebrew-tap
     - org-infra
     - website
 
