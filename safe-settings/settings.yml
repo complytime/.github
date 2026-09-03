@@ -7,21 +7,15 @@
 # See MAINTAINING.md for the full tool boundary.
 #
 # MIGRATION NOTE: Existing repo-level rulesets (created manually via the
-# GitHub UI) use inconsistent names across repos. Safe-settings creates
-# NEW org-level rulesets alongside the existing ones. GitHub evaluates
-# all active rulesets and the most restrictive rule wins, so this is
-# safe. After verifying the org-level rulesets work correctly, the old
-# repo-level rulesets should be deleted manually.
+# GitHub UI) are being replaced by safe-settings managed rulesets.
+# GitHub evaluates all active rulesets and the most restrictive rule
+# wins, so both can coexist during migration. After verifying the
+# safe-settings rulesets work correctly, the old repo-level rulesets
+# should be deleted manually.
 #
-# Current repo-level rulesets to clean up after migration:
-#   complyctl:                       general-rules (active), verify-1-approver (disabled)
-#   complytime-collector-components: Default Protection (active)
-#   complytime-policies:             general-rules (disabled)
-#   complytime-providers:            branch-protection (active)
-#   org-infra:                       Branch Protection (active)
-#   community:                       Branch Protection (active)
-#   website:                         general-rules (active)
-#   complypack:                      tags (active)
+# Remaining repo-level rulesets to clean up:
+#   complypack:  tags (active) — replaced by "release tag protection"
+#   complytime:  main (active) — replaced by repos/complytime.yml
 #
 # Excluded from safe-settings management:
 #   complyscribe:              archived
