@@ -21,6 +21,7 @@
 #   org-infra:                       Branch Protection (active)
 #   community:                       Branch Protection (active)
 #   website:                         general-rules (active)
+#   complypack:                      tags (active)
 #
 # Excluded from safe-settings management:
 #   complyscribe:              archived
@@ -172,3 +173,34 @@ rulesets:
           require_code_owner_review: true
           require_last_push_approval: false
           required_review_thread_resolution: false
+
+  # Ruleset for tag protection — prevent deletion or modification
+  # of release tags. Protects supply chain integrity by ensuring
+  # published version tags remain immutable. Replaces the manual
+  # "tags" ruleset on complypack (id=18348763).
+  - name: "safe-settings: release tag protection"
+    target: tag
+    enforcement: active
+
+    conditions:
+      ref_name:
+        include:
+          - "refs/tags/v*"
+        exclude: []
+      repository_name:
+        include:
+          - complyctl
+          - complypack
+          - complytime-collector-components
+          - complytime-policies
+          - complytime-providers
+          - homebrew-tap
+          - org-infra
+        exclude: []
+
+    rules:
+      # Prevent deletion of release tags.
+      - type: deletion
+
+      # Prevent force-pushing release tags to a different commit.
+      - type: non_fast_forward
