@@ -31,10 +31,15 @@ repository:
   # Currently only on complyctl; this enables it org-wide.
   delete_branch_on_merge: true
 
-  # Merge strategies — all enabled org-wide, matching current state.
+  # Merge strategies.
+  # Squash and merge commit are enabled. Rebase merge is disabled
+  # because it rewrites commit SHAs (breaking Signed-off-by
+  # verification) and does not create a merge commit linking the
+  # PR to the branch history, making git log and git bisect
+  # harder to navigate. See STYLE_GUIDE.md § Pull Requests.
   allow_squash_merge: true
   allow_merge_commit: true
-  allow_rebase_merge: true
+  allow_rebase_merge: false
 
   # Allow the "Update branch" button on PRs.
   # Currently only on complyctl; this enables it org-wide.
