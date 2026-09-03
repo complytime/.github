@@ -10,6 +10,7 @@
 # Excluded: complyscribe (archived), gemara-content-service (archived)
 
 suborgrepos:
+  - complyapi
   - complyctl
   - complypack
   - complytime-collector-components
