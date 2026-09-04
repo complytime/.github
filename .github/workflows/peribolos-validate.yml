@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   project:
     name: Verify peribolos
@@ -27,4 +30,4 @@ jobs:
           go test ./...
 
       - name: Install yamllint and check peribolos.yaml
-        run: pip install yamllint && yamllint peribolos.yaml
+        run: pip install yamllint==1.38.0 && yamllint peribolos.yaml
