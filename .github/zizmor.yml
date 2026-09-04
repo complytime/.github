@@ -1,0 +1,11 @@
+# zizmor configuration — https://docs.zizmor.sh/configuration/
+#
+# Peribolos manages the entire complytime GitHub org (membership, teams,
+# repos), so its GitHub App token intentionally has org-wide scope.
+# The github-app audit flags this as dangerous, but scoping the token
+# to individual repositories would break peribolos' core functionality.
+rules:
+  github-app:
+    ignore:
+      - peribolos-apply.yml
+      - peribolos-drift.yml
