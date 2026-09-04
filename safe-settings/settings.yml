@@ -6,29 +6,14 @@
 #   description, has_projects, default_branch
 # See MAINTAINING.md for the full tool boundary.
 #
-# MIGRATION NOTE: Existing repo-level rulesets (created manually via the
-# GitHub UI) are being replaced by safe-settings managed rulesets.
-# GitHub evaluates all active rulesets and the most restrictive rule
-# wins, so both can coexist during migration. After verifying the
-# safe-settings rulesets work correctly, the old repo-level rulesets
-# should be deleted manually.
-#
-# Remaining repo-level rulesets to clean up:
-#   complypack:  tags (active) — replaced by "release tag protection"
-#   complytime:  main (active) — replaced by repos/complytime.yml
-#
 # Excluded from safe-settings management:
-#   complyscribe:              archived
-#   gemara-content-service:    archived (moved to complytime-labs)
+#   complyscribe:  archived
 
 repository:
   # Allow auto-merge on pull requests when all requirements are met.
-  # Currently enabled on 7 repos; this will enable it on the remaining 4
-  # (complytime, complytime-demos, website, complytime-policies).
   allow_auto_merge: true
 
   # Automatically delete head branches after pull requests are merged.
-  # Currently only on complyctl; this enables it org-wide.
   delete_branch_on_merge: true
 
   # Merge strategies.
@@ -42,16 +27,12 @@ repository:
   allow_rebase_merge: false
 
   # Allow the "Update branch" button on PRs.
-  # Currently only on complyctl; this enables it org-wide.
   allow_update_branch: true
 
   # Disable wiki org-wide. Documentation lives in dedicated repos.
-  # Currently enabled on all repos; this is an intentional hardening.
   has_wiki: false
 
   # Dependabot vulnerability alerts and automated security fixes.
-  # Currently only complyctl and org-infra have dependabot_security_updates
-  # enabled; this enables it org-wide.
   security:
     enableVulnerabilityAlerts: true
     enableAutomatedSecurityFixes: true
@@ -100,14 +81,8 @@ rulesets:
       - type: non_fast_forward
 
       # Pull request requirements.
-      # Baseline: 1 approver, dismiss stale reviews, code owner review,
-      # last push approval. This matches the org-infra ruleset.
-      #
-      # complyctl currently requires 2 approvers — preserved via a
-      # repo-level override in repos/complyctl.yml.
-      #
-      # required_review_thread_resolution is false everywhere today.
-      # Kept false to match current state. Can tighten later.
+      # Repos needing stricter review (e.g. 2 approvers) use
+      # repo-level overrides in repos/*.yml.
       - type: pull_request
         parameters:
           required_approving_review_count: 1
@@ -175,8 +150,7 @@ rulesets:
 
   # Ruleset for tag protection — prevent deletion or modification
   # of release tags. Protects supply chain integrity by ensuring
-  # published version tags remain immutable. Replaces the manual
-  # "tags" ruleset on complypack (id=18348763).
+  # published version tags remain immutable.
   - name: "safe-settings: release tag protection"
     target: tag
     enforcement: active

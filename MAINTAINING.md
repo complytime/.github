@@ -108,9 +108,12 @@ code review auto-assignment is not used for this team.
    in `safe-settings/settings.yml`. **Both files must be updated** — the
    suborg controls settings inheritance, the ruleset controls branch
    protection.
-4. Submit a PR. CI boundary tests validate consistency.
-5. After merge, trigger `workflow_dispatch` on the "Safe Settings Sync"
-   workflow to apply.
+4. Add the repo to `safe-settings/deployment-settings.yml` under
+   `restrictedRepos.include` so safe-settings manages it.
+5. Submit a PR. CI boundary tests validate consistency.
+6. After merge, the daily safe-settings sync (07:00 UTC) applies the
+   change automatically. For immediate application, trigger a manual
+   `workflow_dispatch` run.
 
 ### Change Branch Protection Rules or Rulesets
 
@@ -118,7 +121,8 @@ code review auto-assignment is not used for this team.
 2. The `safe-settings: code repos` ruleset applies to code repos.
 3. The `safe-settings: non-code repos` ruleset applies to non-code repos.
 4. Submit a PR and merge.
-5. Trigger `workflow_dispatch` to apply.
+5. The daily sync applies the change automatically. For immediate
+   application, trigger a manual `workflow_dispatch` run.
 
 ### Add a Repo-Specific Override
 
@@ -265,22 +269,20 @@ Go to Actions > "Safe Settings Sync" > "Run workflow":
   `complytime-demos,community`). Leave empty to apply to all managed
   repos.
 
-### Future automation
+### Automation
 
-After initial validation, the workflow can be extended with:
-- `push` trigger on `safe-settings/**` path changes to main
-- `schedule` trigger (daily at 06:00 UTC) for drift correction
-
-These triggers are intentionally disabled during the initial rollout to
-ensure full manual control.
+The Safe Settings Sync workflow runs daily at 07:00 UTC (after
+peribolos apply at 05:30 UTC) to reconcile settings automatically.
+Manual dispatch is available for immediate application or dry-run
+previews.
 
 ## Troubleshooting
 
 ### Settings not applied after merge
 
-1. Trigger `workflow_dispatch` manually — safe-settings only runs on
-   manual dispatch during initial rollout (no push/schedule triggers).
-2. Check the "Safe Settings Sync" workflow run in the Actions tab.
+1. Check the "Safe Settings Sync" workflow run in the Actions tab —
+   the daily sync at 07:00 UTC should have applied the change.
+2. If it hasn't run yet, trigger `workflow_dispatch` manually.
 3. Look for errors in the workflow logs (credential expiry, API errors).
 
 ### Boundary test failures
@@ -355,22 +357,10 @@ GitHub uses two distinct mechanisms, each with different conflict behavior:
 
 ## Excluded Repos
 
-The following repos are excluded from safe-settings management:
+The following repos are excluded from safe-settings management
+(not listed in `deployment-settings.yml` `restrictedRepos.include`):
 
 - `.github` — the admin repo (avoids circular dependency). Its
   ruleset ("verify") is managed manually via the GitHub UI.
 - `complyscribe` — archived.
-- `gemara-content-service` — archived (moved to complytime-labs).
 
-These are listed in `safe-settings/deployment-settings.yml` under
-`restrictedRepos` and/or excluded from suborg files.
-
-## Migration Notes
-
-Existing repo-level rulesets (created manually via the GitHub UI) coexist
-with the new org-level rulesets managed by safe-settings. GitHub evaluates
-all active rulesets and the most restrictive rule wins.
-
-After verifying the org-level rulesets work correctly, the old repo-level
-rulesets should be deleted via the GitHub UI. The full list is documented
-in comments at the top of `safe-settings/settings.yml`.

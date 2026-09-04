@@ -1,7 +1,6 @@
 # Suborg: non-code repositories.
 # These repos hold community content, demos, releases, and the website.
-# They use lighter branch protection: no required signatures, no code
-# owner review requirement.
+# They use lighter branch protection than code repos.
 #
 # Org-wide defaults from settings.yml are inherited automatically.
 # Only override settings here if non-code repos need different values
