@@ -1,5 +1,5 @@
 # Workflow to apply safe-settings org configuration.
-# Manual dispatch only — add push/schedule triggers after initial validation.
+# Runs daily to reconcile settings and on manual dispatch.
 # Uses a dedicated safe-settings-bot GitHub App for authentication.
 #
 # safe-settings reads config from the admin repo's default branch (main).
@@ -9,6 +9,9 @@
 name: Safe Settings Sync
 
 "on":
+  schedule:
+    # Daily at 07:00 UTC — after peribolos apply (05:30 UTC, ~40 min)
+    - cron: '0 7 * * *'
   workflow_dispatch:
     inputs:
       dry-run:
@@ -122,8 +125,8 @@ jobs:
           DEPLOYMENT_CONFIG_FILE: >-
             ${{ inputs.repos != '' && '/tmp/scoped-deployment-settings.yml'
             || format('{0}/safe-settings/deployment-settings.yml', github.workspace) }}
-          FULL_SYNC_NOP: ${{ inputs.dry-run }}
-          LOG_LEVEL: ${{ inputs.dry-run && 'debug' || 'info' }}
+          FULL_SYNC_NOP: ${{ github.event_name == 'schedule' && 'false' || inputs.dry-run }}
+          LOG_LEVEL: ${{ (github.event_name == 'schedule' || !inputs.dry-run) && 'info' || 'debug' }}
         run: |
           if [ "$FULL_SYNC_NOP" = "true" ]; then
             echo "=== DRY-RUN MODE: Showing what would change ==="
