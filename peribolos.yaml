@@ -53,7 +53,7 @@ orgs:
         has_projects: true
       "complyapi":
         default_branch: main
-        description: A push-based evidence API for ComplyTime.
+        description: API contracts for ComplyTime.
         has_projects: true
       "complyctl":
         default_branch: main
@@ -69,11 +69,11 @@ orgs:
         has_projects: true
       "complytime":
         default_branch: main
-        description: Repository for complytime releases
+        description: Repository for complytime design and proposed enhancements
         has_projects: true
       "complytime-collector-components":
         default_branch: main
-        description: A policy-driven observability toolkit for compliance evidence collection
+        description: A policy-driven observability toolkit for compliance monitoring
         has_projects: true
       "complytime-demos":
         default_branch: main
