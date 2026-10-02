@@ -29,6 +29,7 @@ orgs:
       - iswiac
       - jamimoor
       - JenniferPrivette
+      - macko1
       - mblanco474
       - nladha09
       - phoward-rh
@@ -209,6 +210,7 @@ orgs:
           - Arden97
           - fortiz-ai
           - ggbecker
+          - macko1
           - rhaml-23
         repos:
           complytime-policies: write
