@@ -1,6 +1,6 @@
 module github.com/complytime/.github
 
-go 1.26.8
+go 1.26.9
 
 require (
 	github.com/ghodss/yaml v1.0.0
