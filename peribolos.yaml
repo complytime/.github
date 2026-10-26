@@ -7,7 +7,6 @@ orgs:
     members_can_create_repositories: true
     admins:
       - gxmiranda
-      - jflowers
       - jpower432
       - marcusburghardt
     members:
@@ -131,7 +130,6 @@ orgs:
         description: Write access to non-code repos for project stakeholders
         privacy: closed
         maintainers:
-          - jflowers
           - jpower432
           - marcusburghardt
         members:
@@ -202,7 +200,6 @@ orgs:
         description: CODEOWNERS group for complytime-policies
         privacy: closed
         maintainers:
-          - jflowers
           - jpower432
           - marcusburghardt
         members:
