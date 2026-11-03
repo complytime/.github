@@ -87,7 +87,6 @@ jobs:
             --fix-repos \
             --fix-team-repos \
             --min-admins 2 \
-            --required-admins jflowers \
             --required-admins jpower432 \
             --required-admins marcusburghardt \
             --require-self=false \
